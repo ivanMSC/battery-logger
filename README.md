@@ -1,11 +1,10 @@
 # 🔋 Battery Logger for Windows
-Battery Logger is a lightweight PowerShell-based tool that records your laptop's battery percentage automatically every few minutes.  
-It runs silently in the background using Windows Task Scheduler and writes to a CSV log file for later analysis.
+Battery Logger is a lightweight tool that records your laptop's battery percentage automatically every few minutes.  
+It runs silently in the background and writes to a CSV log file for later analysis.
 
 ## Features
-- Logs battery percentage every 5 minutes (default)
-- Runs completely hidden
-- Uses Windows Task Scheduler for automation
+- Logs battery percentage every 5 minutes (by default)
+- Runs completely hidden using Windows Task Scheduler
 - Outputs data as a simple CSV:
 ```
 Timestamp,BatteryPercentage,PowerSource,BatteryStatus,SaverMode
