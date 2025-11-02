@@ -1,0 +1,16 @@
+# Ignore battery log data
+battery_log.csv
+*.csv
+
+# Windows noise
+Thumbs.db
+Desktop.ini
+
+# PowerShell artifacts
+*.ps1~
+*.bak
+*.log
+
+# VSCode / editors
+.vscode/
+.idea/
