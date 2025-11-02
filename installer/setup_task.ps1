@@ -60,10 +60,11 @@ $trigger = New-ScheduledTaskTrigger -Once -At (Get-Date) `
 
 $action = New-ScheduledTaskAction -Execute "wscript.exe" -Argument "`"$vbsPath`""
 $principal = New-ScheduledTaskPrincipal -UserId $env:USERNAME -RunLevel Limited
+$TaskSettings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
 
 try {
     Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger `
-        -Principal $principal -Description $description -Force
+        -Principal $principal -Description $description -Force -Settings $TaskSettings
 
     Write-Host "Task '$taskName' successfully installed or updated." -ForegroundColor Green
     Write-Host "Interval: $IntervalMinutes minute(s)"
